@@ -1,23 +1,27 @@
 import React from 'react';
-import Link from 'next/link'; // Import the Link component
+import Link from 'next/link';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1>Welcome to My Blog</h1>
-      <p>This is the home page of our simple blog app.</p>
-      <ul>
-        <li>
-          <Link href="/about">
-            Learn more about me
+    <div className="home-container">
+      {/* Hero Section */}
+      <div className="hero-content">
+        <h1 className="title">Welcome to My Blog</h1>
+        <p className="subtitle">
+          Explore my thoughts, experiences, and insights on web development,
+          technology, and more.
+        </p>
+
+        {/* Action Buttons */}
+        <div className="buttons">
+          <Link href="/about" className="button primary-button">
+            Learn More About Me
           </Link>
-        </li>
-        <li>
-          <Link href="/blog">
-            Read my blog posts
+          <Link href="/blog" className="button secondary-button">
+            Read My Blog Posts
           </Link>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   );
 };
